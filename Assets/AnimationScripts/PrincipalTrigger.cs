@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class PrincipalTriggerHandler : MonoBehaviour
 {
-    // Optional: Assign objects to enable when triggered
-    public GameObject phoneAreaObj;
     public GameObject principalObj;
+    public GameObject childPleading;
 
     public string currentTrigger = "";
 
@@ -14,9 +13,8 @@ public class PrincipalTriggerHandler : MonoBehaviour
         if (currentTrigger != triggerName) {
             if (triggerName == "PhoneZone") {
                 Debug.Log("Principal entered phone zone.");
-                if (phoneAreaObj != null)
-                    phoneAreaObj.SetActive(true);
-                    principalObj.SetActive(false);
+                childPleading.SetActive(true);
+                principalObj.SetActive(false);
             }
         }
     }
