@@ -3,8 +3,8 @@ using UnityEngine;
 public class PrincipalTriggerHandler : MonoBehaviour
 {
     // Optional: Assign objects to enable when triggered
-    public GameObject childPleadsObject;
-    public GameObject teacherCallObject;
+    public GameObject phoneAreaObj;
+    public GameObject principalObj;
 
     public string currentTrigger = "";
 
@@ -12,15 +12,11 @@ public class PrincipalTriggerHandler : MonoBehaviour
         string triggerName = other.gameObject.name;
 
         if (currentTrigger != triggerName) {
-            if (triggerName == "child_pleade_trigger") {
-                Debug.Log("Principal entered child plea zone.");
-                if (childPleadsObject != null)
-                    childPleadsObject.SetActive(true);
-            }
-            else if (triggerName == "teacher_call_trigger") {
-                Debug.Log("Principal entered teacher call zone.");
-                if (teacherCallObject != null)
-                    teacherCallObject.SetActive(true);
+            if (triggerName == "PhoneZone") {
+                Debug.Log("Principal entered phone zone.");
+                if (phoneAreaObj != null)
+                    phoneAreaObj.SetActive(true);
+                    principalObj.SetActive(false);
             }
         }
     }
