@@ -16,6 +16,7 @@ public class NPCMovement : MonoBehaviour
             Debug.LogError("nav mesh agent component not attached");
         } else
         {
+            navMeshAgent.updateRotation = false; //can delete that to add fun when an NPC is moving
             SetDestination();
         }
     }
@@ -24,6 +25,7 @@ public class NPCMovement : MonoBehaviour
     {
         if (destination != null)
         {
+            Debug.Log("Im moving");
             Vector3 targetVector = destination.transform.position;
             navMeshAgent.SetDestination(targetVector);
         }
