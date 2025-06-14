@@ -39,7 +39,7 @@ public class NPCMovement : MonoBehaviour
             while (navMeshAgent.pathPending || navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
             {
                 // Occasionally set a new random target within the roam radius
-                if (Random.Range(0, 100) < 10) // 10% chance to choose a new random target
+                if (Random.Range(0, 100) < 1) // 10% chance to choose a new random target
                 {
                     Vector3 randomDirection = Random.insideUnitSphere * roamRadius;
                     randomDirection += targetDestination;
@@ -62,7 +62,7 @@ public class NPCMovement : MonoBehaviour
                 while (audioSource.isPlaying)
                 {
                     // Occasionally set a new random target within the roam radius while the song is playing
-                    if (Random.Range(0, 100) < 10) // 10% chance to choose a new random target
+                    if (Random.Range(0, 100) < 1) // 10% chance to choose a new random target
                     {
                         Vector3 randomDirection = Random.insideUnitSphere * roamRadius;
                         randomDirection += targetDestination;
