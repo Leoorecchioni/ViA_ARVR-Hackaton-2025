@@ -712,8 +712,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc3983f8c6e1a1f45971065b2c076091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phoneAreaObj: {fileID: 0}
   principalObj: {fileID: 0}
+  childPleading: {fileID: 0}
   currentTrigger: 
 --- !u!82 &270097367
 AudioSource:
