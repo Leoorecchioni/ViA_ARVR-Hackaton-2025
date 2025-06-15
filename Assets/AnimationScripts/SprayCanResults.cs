@@ -2,38 +2,30 @@ using UnityEngine;
 
 public class SprayCanCollisionTrigger : MonoBehaviour
 {
+    public GameObject npcWaiting;
     public GameObject npcHidden;
     public GameObject npcCaughtEvidence;
     public GameObject sprayCan;
     public Material blueMaterial;
 
+    public GameObject waitingAudio;
 
     bool hit = false;
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("YEEEEET.");
-        if (hit == false || true)
+        if (hit == false)
         {
             string targetName = collision.gameObject.name;
-            Debug.Log("YEEEEET.");
-            Debug.Log(targetName);
-
-            Debug.Log("SprayCanOut =? " + targetName);
-            Debug.Log("Floor =? " + targetName);
-
-
-            if (targetName == "SprayCanOut")
+            if (targetName == "SprayCanOut" || targetName == "SprayCanOutL" || targetName == "SprayCanOutR")
             {
-                Debug.Log("BEEAT.");
-                if (npcHidden != null)
+                if (npcHidden != null && !npcCaughtEvidence.activeSelf && !npcWaiting.activeSelf)
                     npcHidden.SetActive(true);
                 hit = true;
             }
             else if (targetName == "Floor")
             {
-                Debug.Log("SKEAT.");
-                if (npcCaughtEvidence != null)
+                if (npcCaughtEvidence != null && !npcWaiting.activeSelf && !npcHidden.activeSelf)
                     npcCaughtEvidence.SetActive(true);
                 hit = true;
             }
@@ -51,6 +43,7 @@ public class SprayCanCollisionTrigger : MonoBehaviour
                     mats[0] = blueMaterial;
                     meshRenderer.materials = mats;
                 }
+                waitingAudio.SetActive(false);
             }
         }
     }
