@@ -4,19 +4,32 @@ using System.Collections;
 
 public class CreditsManager : MonoBehaviour
 {
+    public Image logoImage; // Reference to the UI Image component for the logo
     public Text creditsText; // Reference to the UI Text component for credits
+    public float logoDisplayTime = 3f; // Time to display the logo before showing the text
     public float scrollSpeed = 50f; // Speed at which the credits scroll
     public float initialDelay = 2f; // Initial delay before starting the scroll
     public float endDelay = 5f; // Delay at the end of the credits before transitioning
 
     void Start()
     {
-        // Start the coroutine to scroll the credits
-        StartCoroutine(ScrollCredits());
+        // Start the coroutine to handle the logo and credits sequence
+        StartCoroutine(DisplayLogoAndScrollCredits());
     }
 
-    IEnumerator ScrollCredits()
+    IEnumerator DisplayLogoAndScrollCredits()
     {
+        // Display the logo
+        logoImage.gameObject.SetActive(true);
+        creditsText.gameObject.SetActive(false);
+
+        // Wait for the logo display time
+        yield return new WaitForSeconds(logoDisplayTime);
+
+        // Hide the logo and show the credits text
+        logoImage.gameObject.SetActive(false);
+        creditsText.gameObject.SetActive(true);
+
         // Initial delay before starting the scroll
         yield return new WaitForSeconds(initialDelay);
 
@@ -42,7 +55,5 @@ public class CreditsManager : MonoBehaviour
 
         // Example: Quit the application
         Application.Quit();
-
-        // Note: Application.Quit() does not work in the Unity Editor; it only works in a built application.
     }
 }
