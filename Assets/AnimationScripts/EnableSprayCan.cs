@@ -4,6 +4,7 @@ using UnityEngine;
 public class EnableSprayAfterAudio : MonoBehaviour
 {
     public AudioSource childPleadingAudio;
+    public GameObject waitingAudio;
     public GameObject sprayCan;
     public Material yellowMaterial;
 
@@ -65,5 +66,6 @@ public class EnableSprayAfterAudio : MonoBehaviour
 
         Debug.Log("Spray can activated and changed to yellow.");
         childPleading.SetActive(false);
+        waitingAudio.SetActive(true);
     }
 }
