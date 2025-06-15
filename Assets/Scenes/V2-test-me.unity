@@ -457,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7886964559737657117, guid: 5751547ed74b08c4bbf44df10c5a3a0e, type: 3}
       propertyPath: songs.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7886964559737657117, guid: 5751547ed74b08c4bbf44df10c5a3a0e, type: 3}
       propertyPath: 'songs.Array.data[0]'
@@ -466,7 +466,7 @@ PrefabInstance:
     - target: {fileID: 7886964559737657117, guid: 5751547ed74b08c4bbf44df10c5a3a0e, type: 3}
       propertyPath: 'songs.Array.data[1]'
       value: 
-      objectReference: {fileID: 8300000, guid: c98ec9f5d8c24db4bb0698937cf4fa2c, type: 3}
+      objectReference: {fileID: 8300000, guid: 294f0cdc12bde31408a0824c58a3bda6, type: 3}
     - target: {fileID: 7886964559737657117, guid: 5751547ed74b08c4bbf44df10c5a3a0e, type: 3}
       propertyPath: 'songs.Array.data[2]'
       value: 
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: f4e7baa4509c2e44aa204c1c8e17d1ed, type: 3}
     - target: {fileID: 7886964559737657117, guid: 5751547ed74b08c4bbf44df10c5a3a0e, type: 3}
       propertyPath: destinations.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7886964559737657117, guid: 5751547ed74b08c4bbf44df10c5a3a0e, type: 3}
       propertyPath: 'destinations.Array.data[0]'
@@ -498,7 +498,7 @@ PrefabInstance:
     - target: {fileID: 7886964559737657117, guid: 5751547ed74b08c4bbf44df10c5a3a0e, type: 3}
       propertyPath: 'destinations.Array.data[1]'
       value: 
-      objectReference: {fileID: 264056823}
+      objectReference: {fileID: 1537754584}
     - target: {fileID: 7886964559737657117, guid: 5751547ed74b08c4bbf44df10c5a3a0e, type: 3}
       propertyPath: 'destinations.Array.data[2]'
       value: 
